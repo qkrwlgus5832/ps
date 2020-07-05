@@ -55,9 +55,6 @@ int Whroa(int x, int y, int x1, int y1) {
 
 int main() {
 	cin >> N >> r >> c;
-
-
-
 	b = pow(2, N);
 	//white(0, 0, b, b);
 	int result = Whroa(0, 0, b, b);
