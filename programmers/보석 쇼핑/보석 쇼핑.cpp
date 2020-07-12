@@ -26,7 +26,7 @@ void moveRight(vector <string> &gems, int &right) {
 
 }
 vector<int> solution(vector<string> gems) {
-	vector<int> answer;
+	vector<int> answer = { 1, (int) gems.size() };
 
 	int start = 0;
 	int end = 0;
@@ -39,6 +39,7 @@ vector<int> solution(vector<string> gems) {
 	}
 
 	while (1) {
+		moveLeft(gems, start, end);
 		if (m.size() == kinds.size()) {
 			if (tmp > end - start + 1) {
 				answer = { start + 1, end + 1 };
@@ -47,13 +48,6 @@ vector<int> solution(vector<string> gems) {
 		}
 		if (start == gems.size() - 1 || end == gems.size() - 1)
 			return answer;
-		moveLeft(gems, start, end);
-		if (m.size() == kinds.size()) {
-			if (tmp > end - start + 1) {
-				answer = { start + 1, end + 1 };
-				tmp = end - start + 1;
-			}
-		}
 		moveRight(gems, end);
 	}
 
