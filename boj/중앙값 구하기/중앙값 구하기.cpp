@@ -1,10 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <iostream>
-#include <queue>
-#include <vector>
-#include <functional>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 
