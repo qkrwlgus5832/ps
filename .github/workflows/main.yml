@@ -3,7 +3,7 @@ name: dispatch-workflow
 on:
  push:
    branches:
-     - main
+     - master
      
 jobs:
  dispatch:
